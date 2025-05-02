@@ -1,0 +1,428 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     15055,        420]
+NotebookOptionsPosition[     12076,        370]
+NotebookOutlinePosition[     12498,        386]
+CellTagsIndexPosition[     12455,        383]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"SetDirectory", "[", 
+   RowBox[{"NotebookDirectory", "[", "]"}], "]"}], ";"}], "\n", 
+ RowBox[{"<<", "RTNI`"}]}], "Input",
+ CellLabel->"In[3]:=",ExpressionUUID->"60204bd8-47fc-4818-a00f-11ae35ab6343"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Package RTNI (Random Tensor Network Integrator) version \"\>", 
+   "\[InvisibleSpace]", "\<\"1.0.5\"\>", 
+   "\[InvisibleSpace]", "\<\" (last modification: \"\>", 
+   "\[InvisibleSpace]", "\<\"26/01/2019\"\>", 
+   "\[InvisibleSpace]", "\<\").\"\>"}],
+  SequenceForm[
+  "Package RTNI (Random Tensor Network Integrator) version ", "1.0.5", 
+   " (last modification: ", "26/01/2019", ")."],
+  Editable->False]], "Print",
+ CellLabel->
+  "During evaluation of \
+In[3]:=",ExpressionUUID->"2597e11d-0b1e-4391-97d6-432b188da670"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Loading precomputed Weingarten Functions from \"\>", 
+   "\[InvisibleSpace]", "\<\"/precomputedWG/functions1.txt\"\>"}],
+  SequenceForm[
+  "Loading precomputed Weingarten Functions from ", 
+   "/precomputedWG/functions1.txt"],
+  Editable->False]], "Print",
+ CellLabel->
+  "During evaluation of \
+In[3]:=",ExpressionUUID->"0ebbbd5b-e16e-4428-b577-76f16b1f73dd"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Loading precomputed Weingarten Functions from \"\>", 
+   "\[InvisibleSpace]", "\<\"/precomputedWG/functions2.txt\"\>"}],
+  SequenceForm[
+  "Loading precomputed Weingarten Functions from ", 
+   "/precomputedWG/functions2.txt"],
+  Editable->False]], "Print",
+ CellLabel->
+  "During evaluation of \
+In[3]:=",ExpressionUUID->"0b9cc175-d937-44aa-bb08-9d73d8d6a066"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Loading precomputed Weingarten Functions from \"\>", 
+   "\[InvisibleSpace]", "\<\"/precomputedWG/functions3.txt\"\>"}],
+  SequenceForm[
+  "Loading precomputed Weingarten Functions from ", 
+   "/precomputedWG/functions3.txt"],
+  Editable->False]], "Print",
+ CellLabel->
+  "During evaluation of \
+In[3]:=",ExpressionUUID->"7fc6d62e-3e4d-4ae9-9ba5-62cc4ff6e813"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Loading precomputed Weingarten Functions from \"\>", 
+   "\[InvisibleSpace]", "\<\"/precomputedWG/functions4.txt\"\>"}],
+  SequenceForm[
+  "Loading precomputed Weingarten Functions from ", 
+   "/precomputedWG/functions4.txt"],
+  Editable->False]], "Print",
+ CellLabel->
+  "During evaluation of \
+In[3]:=",ExpressionUUID->"489641c6-3256-456a-93ba-f845210e2ee0"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Loading precomputed Weingarten Functions from \"\>", 
+   "\[InvisibleSpace]", "\<\"/precomputedWG/functions5.txt\"\>"}],
+  SequenceForm[
+  "Loading precomputed Weingarten Functions from ", 
+   "/precomputedWG/functions5.txt"],
+  Editable->False]], "Print",
+ CellLabel->
+  "During evaluation of \
+In[3]:=",ExpressionUUID->"12b68196-37f0-4955-8fe3-ba02eb376d84"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Loading precomputed Weingarten Functions from \"\>", 
+   "\[InvisibleSpace]", "\<\"/precomputedWG/functions6.txt\"\>"}],
+  SequenceForm[
+  "Loading precomputed Weingarten Functions from ", 
+   "/precomputedWG/functions6.txt"],
+  Editable->False]], "Print",
+ CellLabel->
+  "During evaluation of \
+In[3]:=",ExpressionUUID->"5cc7497c-c311-49b8-bb79-1e74b700f21e"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Loading precomputed Weingarten Functions from \"\>", 
+   "\[InvisibleSpace]", "\<\"/precomputedWG/functions7.txt\"\>"}],
+  SequenceForm[
+  "Loading precomputed Weingarten Functions from ", 
+   "/precomputedWG/functions7.txt"],
+  Editable->False]], "Print",
+ CellLabel->
+  "During evaluation of \
+In[3]:=",ExpressionUUID->"61fabf07-96b1-44eb-a570-6744350677d1"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Loading precomputed Weingarten Functions from \"\>", 
+   "\[InvisibleSpace]", "\<\"/precomputedWG/functions8.txt\"\>"}],
+  SequenceForm[
+  "Loading precomputed Weingarten Functions from ", 
+   "/precomputedWG/functions8.txt"],
+  Editable->False]], "Print",
+ CellLabel->
+  "During evaluation of \
+In[3]:=",ExpressionUUID->"6608bca8-c49f-49d9-9eae-62ed889148f5"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Loading precomputed Weingarten Functions from \"\>", 
+   "\[InvisibleSpace]", "\<\"/precomputedWG/functions9.txt\"\>"}],
+  SequenceForm[
+  "Loading precomputed Weingarten Functions from ", 
+   "/precomputedWG/functions9.txt"],
+  Editable->False]], "Print",
+ CellLabel->
+  "During evaluation of \
+In[3]:=",ExpressionUUID->"2bc5c32c-8eee-4ab3-ba45-8ce2d0f16cb0"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Loading precomputed Weingarten Functions from \"\>", 
+   "\[InvisibleSpace]", "\<\"/precomputedWG/functions10.txt\"\>"}],
+  SequenceForm[
+  "Loading precomputed Weingarten Functions from ", 
+   "/precomputedWG/functions10.txt"],
+  Editable->False]], "Print",
+ CellLabel->
+  "During evaluation of \
+In[3]:=",ExpressionUUID->"3f45da16-b85c-4261-af82-3f2756a9e676"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Loading precomputed Weingarten Functions from \"\>", 
+   "\[InvisibleSpace]", "\<\"/precomputedWG/functions11.txt\"\>"}],
+  SequenceForm[
+  "Loading precomputed Weingarten Functions from ", 
+   "/precomputedWG/functions11.txt"],
+  Editable->False]], "Print",
+ CellLabel->
+  "During evaluation of \
+In[3]:=",ExpressionUUID->"d24b5d54-a721-4708-bebd-e0f21dbd8d41"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Loading precomputed Weingarten Functions from \"\>", 
+   "\[InvisibleSpace]", "\<\"/precomputedWG/functions12.txt\"\>"}],
+  SequenceForm[
+  "Loading precomputed Weingarten Functions from ", 
+   "/precomputedWG/functions12.txt"],
+  Editable->False]], "Print",
+ CellLabel->
+  "During evaluation of \
+In[3]:=",ExpressionUUID->"e56b53eb-7e18-47b4-ad15-e2ab5c36ce38"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Loading precomputed Weingarten Functions from \"\>", 
+   "\[InvisibleSpace]", "\<\"/precomputedWG/functions13.txt\"\>"}],
+  SequenceForm[
+  "Loading precomputed Weingarten Functions from ", 
+   "/precomputedWG/functions13.txt"],
+  Editable->False]], "Print",
+ CellLabel->
+  "During evaluation of \
+In[3]:=",ExpressionUUID->"f3ac114f-2f88-4c68-90ae-e715a1e9f6f3"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Loading precomputed Weingarten Functions from \"\>", 
+   "\[InvisibleSpace]", "\<\"/precomputedWG/functions14.txt\"\>"}],
+  SequenceForm[
+  "Loading precomputed Weingarten Functions from ", 
+   "/precomputedWG/functions14.txt"],
+  Editable->False]], "Print",
+ CellLabel->
+  "During evaluation of \
+In[3]:=",ExpressionUUID->"4080ccd3-86fe-41d6-b001-2c93d8a5564e"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Loading precomputed Weingarten Functions from \"\>", 
+   "\[InvisibleSpace]", "\<\"/precomputedWG/functions15.txt\"\>"}],
+  SequenceForm[
+  "Loading precomputed Weingarten Functions from ", 
+   "/precomputedWG/functions15.txt"],
+  Editable->False]], "Print",
+ CellLabel->
+  "During evaluation of \
+In[3]:=",ExpressionUUID->"ed44cacd-c78f-4a77-86f1-d33c2ded6ae3"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Loading precomputed Weingarten Functions from \"\>", 
+   "\[InvisibleSpace]", "\<\"/precomputedWG/functions16.txt\"\>"}],
+  SequenceForm[
+  "Loading precomputed Weingarten Functions from ", 
+   "/precomputedWG/functions16.txt"],
+  Editable->False]], "Print",
+ CellLabel->
+  "During evaluation of \
+In[3]:=",ExpressionUUID->"3c5e8117-1035-464f-8a0c-969e1d93ff74"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Loading precomputed Weingarten Functions from \"\>", 
+   "\[InvisibleSpace]", "\<\"/precomputedWG/functions17.txt\"\>"}],
+  SequenceForm[
+  "Loading precomputed Weingarten Functions from ", 
+   "/precomputedWG/functions17.txt"],
+  Editable->False]], "Print",
+ CellLabel->
+  "During evaluation of \
+In[3]:=",ExpressionUUID->"1c7c5599-6fea-42ca-af87-487a5099c2a6"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Loading precomputed Weingarten Functions from \"\>", 
+   "\[InvisibleSpace]", "\<\"/precomputedWG/functions18.txt\"\>"}],
+  SequenceForm[
+  "Loading precomputed Weingarten Functions from ", 
+   "/precomputedWG/functions18.txt"],
+  Editable->False]], "Print",
+ CellLabel->
+  "During evaluation of \
+In[3]:=",ExpressionUUID->"05bcd30a-73ab-43b5-b581-fad07e014779"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Loading precomputed Weingarten Functions from \"\>", 
+   "\[InvisibleSpace]", "\<\"/precomputedWG/functions19.txt\"\>"}],
+  SequenceForm[
+  "Loading precomputed Weingarten Functions from ", 
+   "/precomputedWG/functions19.txt"],
+  Editable->False]], "Print",
+ CellLabel->
+  "During evaluation of \
+In[3]:=",ExpressionUUID->"3f65c140-af1f-4e27-a021-fbec02f521e1"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Loading precomputed Weingarten Functions from \"\>", 
+   "\[InvisibleSpace]", "\<\"/precomputedWG/functions20.txt\"\>"}],
+  SequenceForm[
+  "Loading precomputed Weingarten Functions from ", 
+   "/precomputedWG/functions20.txt"],
+  Editable->False]], "Print",
+ CellLabel->
+  "During evaluation of \
+In[3]:=",ExpressionUUID->"b5d619a6-7fd4-417c-96e6-743825b58906"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Ensemble average of K", "Chapter",ExpressionUUID->"41f7d6b2-2b63-4399-8457-b0af7266c865"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"MultinomialexpectationvalueHaar", "[", 
+    RowBox[{"d", ",", 
+     RowBox[{"{", 
+      RowBox[{"2", ",", "1", ",", "2", ",", "1"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"Pba", ",", "Ca", ",", "Pab", ",", " ", "Cb"}], "}"}], ",", 
+     "True"}], "]"}], "/.", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Tr", "[", "Ca", "]"}], "\[Rule]", "0"}], ",", 
+     RowBox[{
+      RowBox[{"Tr", "[", "Cb", "]"}], "\[Rule]", "0"}]}], "}"}]}], "//", 
+  "Simplify"}]], "Input",
+ CellLabel->"In[6]:=",ExpressionUUID->"b03c5513-3585-46f8-8b22-7c454c63c38b"],
+
+Cell[BoxData[
+ FractionBox[
+  RowBox[{
+   RowBox[{"Tr", "[", 
+    RowBox[{"Cb", ".", "Ca"}], "]"}], " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"d", " ", 
+      RowBox[{"Tr", "[", "Pab", "]"}], " ", 
+      RowBox[{"Tr", "[", "Pba", "]"}]}], "-", 
+     RowBox[{"Tr", "[", 
+      RowBox[{"Pba", ".", "Pab"}], "]"}]}], ")"}]}], 
+  RowBox[{"d", " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"-", "1"}], "+", 
+     SuperscriptBox["d", "2"]}], ")"}]}]]], "Output",
+ CellLabel->"Out[6]=",ExpressionUUID->"714f030d-abbc-4f01-ae92-6ce9baf6b08a"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"MultinomialexpectationvalueHaar", "[", 
+    RowBox[{"d", ",", 
+     RowBox[{"{", 
+      RowBox[{"2", ",", "1", ",", "2", ",", "1"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"X", ",", "Ob", ",", "X", ",", " ", "Oa"}], "}"}], ",", 
+     "True"}], "]"}], "/.", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Tr", "[", "X", "]"}], "\[Rule]", "0"}], ",", 
+     RowBox[{
+      RowBox[{"Tr", "[", 
+       RowBox[{"X", ".", "X"}], "]"}], "\[Rule]", "d"}]}], "}"}]}], "//", 
+  "Simplify"}]], "Input",
+ CellLabel->"In[8]:=",ExpressionUUID->"65a098e1-97b7-4561-8c1c-c9987644bc0a"],
+
+Cell[BoxData[
+ FractionBox[
+  RowBox[{
+   RowBox[{"d", " ", 
+    RowBox[{"Tr", "[", "Oa", "]"}], " ", 
+    RowBox[{"Tr", "[", "Ob", "]"}]}], "-", 
+   RowBox[{"Tr", "[", 
+    RowBox[{"Oa", ".", "Ob"}], "]"}]}], 
+  RowBox[{
+   RowBox[{"-", "1"}], "+", 
+   SuperscriptBox["d", "2"]}]]], "Output",
+ CellLabel->"Out[8]=",ExpressionUUID->"cabb35b1-eca6-46cf-97da-9d38340f589c"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{455.25, 735.},
+WindowMargins->{{Automatic, -4.2000000000000455`}, {Automatic, 0}},
+FrontEndVersion->"12.2 for Microsoft Windows (64-bit) (February 5, 2021)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"f6b2107d-033b-4bd9-96ec-0060191b0a05"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 236, 5, 47, "Input",ExpressionUUID->"60204bd8-47fc-4818-a00f-11ae35ab6343"],
+Cell[CellGroupData[{
+Cell[841, 31, 570, 13, 41, "Print",ExpressionUUID->"2597e11d-0b1e-4391-97d6-432b188da670"],
+Cell[1414, 46, 409, 10, 41, "Print",ExpressionUUID->"0ebbbd5b-e16e-4428-b577-76f16b1f73dd"],
+Cell[1826, 58, 409, 10, 41, "Print",ExpressionUUID->"0b9cc175-d937-44aa-bb08-9d73d8d6a066"],
+Cell[2238, 70, 409, 10, 41, "Print",ExpressionUUID->"7fc6d62e-3e4d-4ae9-9ba5-62cc4ff6e813"],
+Cell[2650, 82, 409, 10, 41, "Print",ExpressionUUID->"489641c6-3256-456a-93ba-f845210e2ee0"],
+Cell[3062, 94, 409, 10, 41, "Print",ExpressionUUID->"12b68196-37f0-4955-8fe3-ba02eb376d84"],
+Cell[3474, 106, 409, 10, 41, "Print",ExpressionUUID->"5cc7497c-c311-49b8-bb79-1e74b700f21e"],
+Cell[3886, 118, 409, 10, 41, "Print",ExpressionUUID->"61fabf07-96b1-44eb-a570-6744350677d1"],
+Cell[4298, 130, 409, 10, 41, "Print",ExpressionUUID->"6608bca8-c49f-49d9-9eae-62ed889148f5"],
+Cell[4710, 142, 409, 10, 41, "Print",ExpressionUUID->"2bc5c32c-8eee-4ab3-ba45-8ce2d0f16cb0"],
+Cell[5122, 154, 411, 10, 41, "Print",ExpressionUUID->"3f45da16-b85c-4261-af82-3f2756a9e676"],
+Cell[5536, 166, 411, 10, 41, "Print",ExpressionUUID->"d24b5d54-a721-4708-bebd-e0f21dbd8d41"],
+Cell[5950, 178, 411, 10, 41, "Print",ExpressionUUID->"e56b53eb-7e18-47b4-ad15-e2ab5c36ce38"],
+Cell[6364, 190, 411, 10, 41, "Print",ExpressionUUID->"f3ac114f-2f88-4c68-90ae-e715a1e9f6f3"],
+Cell[6778, 202, 411, 10, 41, "Print",ExpressionUUID->"4080ccd3-86fe-41d6-b001-2c93d8a5564e"],
+Cell[7192, 214, 411, 10, 41, "Print",ExpressionUUID->"ed44cacd-c78f-4a77-86f1-d33c2ded6ae3"],
+Cell[7606, 226, 411, 10, 41, "Print",ExpressionUUID->"3c5e8117-1035-464f-8a0c-969e1d93ff74"],
+Cell[8020, 238, 411, 10, 41, "Print",ExpressionUUID->"1c7c5599-6fea-42ca-af87-487a5099c2a6"],
+Cell[8434, 250, 411, 10, 41, "Print",ExpressionUUID->"05bcd30a-73ab-43b5-b581-fad07e014779"],
+Cell[8848, 262, 411, 10, 41, "Print",ExpressionUUID->"3f65c140-af1f-4e27-a021-fbec02f521e1"],
+Cell[9262, 274, 411, 10, 41, "Print",ExpressionUUID->"b5d619a6-7fd4-417c-96e6-743825b58906"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9722, 290, 95, 0, 67, "Chapter",ExpressionUUID->"41f7d6b2-2b63-4399-8457-b0af7266c865"],
+Cell[CellGroupData[{
+Cell[9842, 294, 613, 17, 66, "Input",ExpressionUUID->"b03c5513-3585-46f8-8b22-7c454c63c38b"],
+Cell[10458, 313, 544, 17, 51, "Output",ExpressionUUID->"714f030d-abbc-4f01-ae92-6ce9baf6b08a"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11039, 335, 635, 18, 66, "Input",ExpressionUUID->"65a098e1-97b7-4561-8c1c-c9987644bc0a"],
+Cell[11677, 355, 371, 11, 48, "Output",ExpressionUUID->"cabb35b1-eca6-46cf-97da-9d38340f589c"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
